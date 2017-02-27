@@ -1,4 +1,6 @@
 #include "Account.h"
+#include "TestData.h"
+
 
 using std::cout;
 using std::endl;
@@ -37,35 +39,40 @@ void Account::SetAccountID() {
 	AccountID = AccountID + 1;
 }
 
-void Account::Deposit() {
+void Account::Deposit(int val) {
 	// Add value to Account
 	// Add entry to Transaction Database
-	cout << "Parent Deposit Done"<<endl;
+
+	Balance += val;
+
+	cout << "Parent Deposit Done! Value"<< float(float(val) / 100)<<endl;
+
 
 }
 
-void Account::Withdraw() {
+void Account::Withdraw(int val) {
 	// Withdraw value from balance
 	// Add to transaction database
-	cout << "Parent Withdraw Done" << endl;
+	Balance -= val;
+	cout << "Parent Withdraw Done! Value = " << float(val / 100) << endl;
 }
 
-void Account::Transfer() {
+void Account::Transfer(int val) {
 	// Add value to Account
 	// Withdraw value from balance
 	// Add to transaction database
-	cout << "Parent Transfer Done" << endl;
+	cout << "Parent Transfer Done! Value = " << float(val / 100) << endl;
 }
 
 void Account::Update(int val) {
 	// Calculate interest rates
 
-	cout << "Parent Update Done" << endl;
+	cout << "Parent Update Done! Value = " << endl;
 }
 
 void Account::ViewBalances() {
 	// Print account balance
-	cout << "Parent Balances Done" << endl;
+	cout << "Parent Balances Done! Value = " << Balance << endl;
 }
 
 // For Current Account types only

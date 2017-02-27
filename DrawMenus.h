@@ -36,7 +36,6 @@ void DrawPayMenu() {
 	cout << "**                                                              **" << endl;
 	cout << "**                                                              **" << endl;
 	cout << "**    please insert amount you wish.                            **" << endl;
-	cout << "**    followed by your choice of option.                        **" << endl;
 	cout << "**                                                              **" << endl;
 	cout << "**                                                              **" << endl;
 	cout << "**                                                              **" << endl;
@@ -45,7 +44,8 @@ void DrawPayMenu() {
 	cout << "**                                                              **" << endl;
 	cout << "**                                                              **" << endl;
 	cout << "**                                                              **" << endl;
-	cout << "**    (1) compete transaction                    (0) cancel     **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**  (enter)to complete transaction               (0) cancel     **" << endl;
 	cout << "**                                                              **" << endl;
 	cout << "******************************************************************" << endl;
 }
@@ -59,7 +59,6 @@ void DrawTransferMenu() {
 	cout << "**                                                              **" << endl;
 	cout << "**    please account number to transfer to.                     **" << endl;
 	cout << "**    followed by the amount of money.                          **" << endl;
-	cout << "**    and then which option of choice.                          **" << endl;
 	cout << "**                                                              **" << endl;
 	cout << "**                                                              **" << endl;
 	cout << "**                                                              **" << endl;
@@ -67,7 +66,8 @@ void DrawTransferMenu() {
 	cout << "**                                                              **" << endl;
 	cout << "**                                                              **" << endl;
 	cout << "**                                                              **" << endl;
-	cout << "**    (1) compete transaction                    (0) cancel     **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**    (enter)compete transaction                 (0) cancel     **" << endl;
 	cout << "**                                                              **" << endl;
 	cout << "******************************************************************" << endl;	
 }

@@ -20,39 +20,55 @@ using std::endl;
 
 int main()
 {
-	//Account TestAccount;
+	Account TestAccount;
 	int MenuState = 99;
-
-	/*
-	while (MenuState != 0)
-	{
+	DrawMainMenu(); 
+	cin >> MenuState;
+	while (MenuState != 0){
 		DrawMainMenu();
-		cin >> MenuState;
-
 		switch (MenuState)
 		{
+			
 		case(1):
-			// Do stuff
-			TestAccount.Deposit();
+			// Deposit
+			DrawPayMenu();
+			// enter value
+			int val;
+			cin >> val;
+
+			//if (val == 0) break;
+			if(val != 0){ test1->Deposit(val); }
+				
+
 			break;
+
 		case(2):
-			// Do stuff
-			TestAccount.Withdraw();
+			// Withdraw
+			DrawPayMenu();
+			test1->Withdraw(0);
 			break;
 
 		case(3):
-			// Do stuff
-			TestAccount.Transfer();
+			// Transfer
+			DrawTransferMenu();
+			test1->Transfer(0);
 			break;
 
 		case(4) :
-			// Do stuff
-			TestAccount.Payment();
+			// Payment
+			DrawPayMenu();
+			test1->Payment();
 			break;
 
 		case(5):
-			// Do stuff
-			TestAccount.ViewStatement();
+			// Statement
+			DrawInfoMenu();
+			test1->ViewStatement();
+			break;
+		case(10):
+			// Call Deposit methods
+			DrawInfoMenu();
+			test1->ViewStatement();
 			break;
 
 		case(0):
@@ -62,14 +78,15 @@ int main()
 
 		default:
 			cout << "---------- ERROR OCCURED ----------" <<endl<<endl;
-				// Bollocks
-				break;
+			// Bollocks
+			break;
 		}
+
+		cin >> MenuState;
+		
 	}
 
-	*/
 
-	LoadData();
 	cin >> MenuState;
     return 0;
 }

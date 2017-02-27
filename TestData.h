@@ -8,12 +8,16 @@
 
 #include <time.h>
 
-std::vector<Account*> AccountsTest;
+std::vector<Client*> ClientDB;
+std::vector<Account*> AccountsDB;
 
-inline void LoadData() {
-	Account *test;
-	AccountsTest.push_back(test);
-	Account *newAccount;
-	AccountsTest.push_back(newAccount);
-}
+Account *test1 = new Account(12, 0);
+Account *test2 = new Account(15, 0);
+Account *test3 = new Account(17, 0);
+Account *test4 = new Account(19, 0);
+Account *test5 = new Account(21, 0);
+
+
+
+
 

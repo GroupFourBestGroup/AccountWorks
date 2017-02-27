@@ -7,8 +7,6 @@ class Account
 {
 // Data section
 public:
-
-private:
 	int AccountID;
 	int ClientID;
 	int Balance;
@@ -18,6 +16,7 @@ private:
 	time_t CreateDate;
 	time_t LastAccess;
 
+private:
 
 
 // Methods section
@@ -28,9 +27,9 @@ public:
 	virtual ~Account();
 
 	virtual void SetAccountID();
-	virtual void Deposit();
-	virtual void Withdraw();
-	virtual void Transfer();
+	virtual void Deposit(int val);
+	virtual void Withdraw(int val);
+	virtual void Transfer(int val);
 	virtual void Update(int val);
 
 	virtual void ViewBalances();
