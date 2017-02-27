@@ -1,29 +1,37 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <vector>
 
-using std::cout;
-using std::endl;
-
-class Account
+class Account 
 {
 // Data section
 public:
 
 private:
-	std::string type;
-	int balance;
-	int interest;
-	struct StatementItem;
+	int AccountID;
+	int ClientID;
+	int Balance;
+	int InterestRate;
+	int InterestCap;
+	int ODLimit;
+	time_t CreateDate;
+	time_t LastAccess;
 
+
+
+// Methods section
 public:
 	Account();
+	Account(int Client, int val);
+
 	virtual ~Account();
 
+	virtual void SetAccountID();
 	virtual void Deposit();
 	virtual void Withdraw();
 	virtual void Transfer();
-	virtual void Update();
+	virtual void Update(int val);
 
 	virtual void ViewBalances();
 

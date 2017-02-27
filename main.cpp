@@ -1,8 +1,13 @@
-/* AdvSE_G4_Workshops.cpp : Defines the entry point for the console application.
-*/
+
 #include "targetver.h"
 #include <iostream>
 #include <stdio.h>
+#include <vector>
+#include <string>
+#include <time.h>
+
+#include "DrawMenus.h"
+#include "TestData.h"
 
 #include "AccCurrent.h"
 #include "AccSavings.h"
@@ -11,14 +16,14 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void DrawMainMenu();
+
 
 int main()
 {
-	AccCurrent TestAccount;
+	//Account TestAccount;
 	int MenuState = 99;
 
-
+	/*
 	while (MenuState != 0)
 	{
 		DrawMainMenu();
@@ -62,26 +67,11 @@ int main()
 		}
 	}
 
+	*/
+
+	LoadData();
+	cin >> MenuState;
     return 0;
 }
 
-void DrawMainMenu() {
-	cout << "******************************************************************" << endl;
-	cout << "**   Current Account Main Menu                                  **" << endl;
-	cout << "******************************************************************" << endl;
-	cout << "**                                                              **" << endl;
-	cout << "**   (1) Deposit                                                **" << endl;
-	cout << "**                                                              **" << endl;
-	cout << "**   (2) Withdraw                                               **" << endl;
-	cout << "**                                                              **" << endl;
-	cout << "**   (3) Transfer                                               **" << endl;
-	cout << "**                                                              **" << endl;
-	cout << "**   (4) Payment                                                **" << endl;
-	cout << "**                                                              **" << endl;
-	cout << "**   (5) Statements                                             **" << endl;
-	cout << "**                                                              **" << endl;
-	cout << "**   (0) Exit                                                   **" << endl;
-	cout << "**                                                              **" << endl;
-	cout << "**                                                              **" << endl;
-	cout << "******************************************************************" << endl;
-}
+

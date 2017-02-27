@@ -3,7 +3,6 @@
 
 using std::string;
 
-string name;
 class Client
 {
 	string Forename;
@@ -12,7 +11,6 @@ class Client
 	string uname;
 	string password;
 	string pin;
-
 
 public:
 	Client();

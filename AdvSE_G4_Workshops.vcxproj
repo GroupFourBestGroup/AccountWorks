@@ -149,7 +149,9 @@
     <ClInclude Include="Account.h" />
     <ClInclude Include="AccSavings.h" />
     <ClInclude Include="Client.h" />
+    <ClInclude Include="DrawMenus.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TestData.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AccCurrent.cpp" />
@@ -157,6 +159,7 @@
     <ClCompile Include="AccSavings.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TestData.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
