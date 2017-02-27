@@ -27,3 +27,69 @@ void DrawMainMenu() {
 	cout << "**                                                              **" << endl;
 	cout << "******************************************************************" << endl;
 }
+
+void DrawPayMenu() {
+	system("cls");
+	cout << "******************************************************************" << endl;
+	cout << "**   Current Account transaction menu                           **" << endl;
+	cout << "******************************************************************" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**    please insert amount you wish.                            **" << endl;
+	cout << "**    followed by your choice of option.                        **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**    (1) compete transaction                    (0) cancel     **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "******************************************************************" << endl;
+}
+
+void DrawTransferMenu() {
+	system("cls");
+	cout << "******************************************************************" << endl;
+	cout << "**   Current Account Transfer Menu                              **" << endl;
+	cout << "******************************************************************" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**    please account number to transfer to.                     **" << endl;
+	cout << "**    followed by the amount of money.                          **" << endl;
+	cout << "**    and then which option of choice.                          **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**    (1) compete transaction                    (0) cancel     **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "******************************************************************" << endl;	
+}
+
+void DrawInfoMenu() {
+	system("cls");
+	cout << "******************************************************************" << endl;
+	cout << "**   Current Account Main Menu                                  **" << endl;
+	cout << "******************************************************************" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**      current account number -                                **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**      current account holder -                                **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**      current account type -                                  **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**      current account amount -                                **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**    (0) back                                                  **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "******************************************************************" << endl;	
+}
