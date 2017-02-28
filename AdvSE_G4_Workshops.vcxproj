@@ -150,8 +150,6 @@
     <ClInclude Include="AccSavings.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="DrawMenus.h" />
-    <ClInclude Include="targetver.h" />
-    <ClInclude Include="TestData.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AccCurrent.cpp" />
