@@ -6,7 +6,9 @@ class AccCurrent :
 public:
 	AccCurrent();
 	~AccCurrent();
-
-	//void Deposit() {}
+	
+	void Deposit(int val) {}
 };
+
+
 
