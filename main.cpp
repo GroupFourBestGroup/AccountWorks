@@ -19,11 +19,12 @@ using std::cin;
 using std::endl;
 
 /* GLOBALS */
-int gAcct;
+int gAcct=0;
+int gClient=0;
+Client *UseClient;
+Account *UseAccount;
 std::vector<Client> ClientDB;
 std::vector<Account> AccountsDB;
-
-
 
 int main()
 {
@@ -33,9 +34,17 @@ int main()
 	AddClient("Marc", "Chapman", "ChunkyChip");
 	AddClient("Daryl", "Conway", "DefconGinger");
 	AddClient("Ryan", "Wooton", "JollyGreen");
-
-
+	
 	listClients();
+
+	cout << endl;
+
+	findClient();
+	gClient = 1;
+
+	cout << endl;
+	findClient();
+
 	/* END	Test data	*/
 
 

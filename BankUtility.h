@@ -5,6 +5,7 @@
 #include "Account.h"
 
 extern int gAcct;
+extern int gClient;
 extern std::vector<Client> ClientDB;
 extern std::vector<Account> AccountsDB;
 
@@ -20,10 +21,29 @@ void AddClient(std::string forename, std::string surname, std::string username) 
 	ClientDB.push_back(client1);
 }
 
+void findClient() {
+	std::vector<Client>::iterator client;
+	for (client = ClientDB.begin(); client != ClientDB.end(); client++) {
+		if (gClient == 0) {
+			std::cout << "ERROR: Client ID not specified! " << std::endl;
+			return;
+		}
+		if (client->ClientID == gClient) {
+			cout << "Found Client ID = " << client->ClientID << "; "
+				<< "U-Name = " << client->username << "; "
+				<< "Pin = " << client->pin << "; "
+				<< endl;
+		}
+
+	}
+}
+
 void listClients() {
 	std::vector<Client>::iterator client;
 	for (client = ClientDB.begin(); client != ClientDB.end(); client++)	{
-		cout << "Found Client ID = " << client->ClientID
+		cout << "Found Client ID = " << client->ClientID << "; "
+			<< "U-Name = " << client->username << "; "
+			<< "Pin = " << client->pin << "; "
 			<< endl;
 	}
 }
