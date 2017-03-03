@@ -9,6 +9,11 @@ extern int gClient;
 extern std::vector<Client> ClientDB;
 extern std::vector<Account> AccountsDB;
 
+/**
+* Deposit a value into the account.
+* @param client ClientID of account owner
+* @param val an integer value in pence
+*/
 void AddAccount(int client, int value) {
 	//Account *Acct1 = new Account(client, value);
 	if (gClient==0 || client != gClient){
@@ -19,12 +24,21 @@ void AddAccount(int client, int value) {
 	AccountsDB.push_back(Acct1);
 }
 
+/**
+* Deposit a value into the account.
+* @param forename string personal details
+* @param surname string personal details
+* @param username string used for logging into system.
+*/
 void AddClient(std::string forename, std::string surname, std::string username) {
 	//Client *client1 = new Client(forename, surname, username);
 	Client client1(forename, surname, username);
 	ClientDB.push_back(client1);
 }
 
+/**
+* Find a single client using global variable gClient.
+*/
 void findClient() {
 	std::vector<Client>::iterator client;
 	for (client = ClientDB.begin(); client != ClientDB.end(); client++) {
@@ -42,6 +56,9 @@ void findClient() {
 	}
 }
 
+/**
+* List all known clients
+*/
 void listClients() {
 	std::vector<Client>::iterator client;
 	for (client = ClientDB.begin(); client != ClientDB.end(); client++)	{
@@ -52,7 +69,9 @@ void listClients() {
 	}
 }
 
-
+/**
+* List all known Accounts
+*/
 void listAccounts() {
 	std::vector<Account>::iterator acct;
 	for (acct = AccountsDB.begin(); acct != AccountsDB.end(); acct++)
