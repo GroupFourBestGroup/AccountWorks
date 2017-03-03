@@ -8,7 +8,7 @@ AccCurrent::~AccCurrent()
 {
 }
 
-void Account::Deposit(int val) {
+void AccCurrent::Deposit(int val) {
 	if (val >= 200)
   { val = val * 0.005}
   
