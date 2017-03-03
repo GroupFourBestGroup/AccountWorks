@@ -16,15 +16,7 @@ int Account::TotalAccounts = 0;
 * Default Constructor
 */
 Account::Account(){	
-	time_t date=time(0);
-	SetAccountID();
-	ClientID=0;
-	Balance=0;
-	InterestRate=0;
-	InterestCap=0;
-	ODLimit=0;
-	CreateDate=date;
-	LastAccess=date;
+
 }
 
 /**
