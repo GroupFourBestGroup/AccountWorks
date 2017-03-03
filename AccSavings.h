@@ -6,5 +6,7 @@ class AccSavings :
 public:
 	AccSavings();
 	~AccSavings();
+	
+	void Deposit(int val);
 };
 
