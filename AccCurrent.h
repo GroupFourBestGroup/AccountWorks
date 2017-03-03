@@ -6,8 +6,8 @@ class AccCurrent :
 public:
 	AccCurrent();
 	~AccCurrent();
-	
-	void Deposit(int val) {}
+
+	void Deposit(int val);
 };
 
 

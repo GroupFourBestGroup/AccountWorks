@@ -7,6 +7,6 @@ public:
 	AccSavings();
 	~AccSavings();
 	
-	void Deposit(int val)
+	void Deposit(int val);
 };
 
