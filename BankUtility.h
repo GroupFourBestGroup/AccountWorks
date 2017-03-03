@@ -11,6 +11,10 @@ extern std::vector<Account> AccountsDB;
 
 void AddAccount(int client, int value) {
 	//Account *Acct1 = new Account(client, value);
+	if (gClient==0 || client != gClient){
+		cout << "Error: Invalid or mmismatched Client ID!" << endl;
+		return;
+	}
 	Account Acct1(client, value);
 	AccountsDB.push_back(Acct1);
 }
