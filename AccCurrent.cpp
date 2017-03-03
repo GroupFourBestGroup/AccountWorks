@@ -9,7 +9,7 @@ AccCurrent::~AccCurrent()
 }
 
 void AccCurrent::Deposit(int val) {
-	if (val >= 20000)
+	if (Balance+val >= 20000)
 	{
 		val = val * 0.005;
 	}

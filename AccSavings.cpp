@@ -10,7 +10,7 @@ AccSavings::~AccSavings()
 }
 
 void AccSavings::Deposit(int val) {
-	if (val >= 100000)
+	if (Balance+val >= 100000)
 	{
 		val = val * 0.012;
 	}
