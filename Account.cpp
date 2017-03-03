@@ -1,10 +1,17 @@
 #include "Account.h"
+#include "Client.h"
 #include <time.h>
 
 using std::cout;
 using std::endl;
 
+extern int gAcct;
+extern int gClient;
+extern std::vector<Client> ClientDB;
+extern std::vector<Account> AccountsDB;
+
 int Account::TotalAccounts = 0;
+
 /**
 * Default Constructor
 */
@@ -76,8 +83,15 @@ void Account::Deposit(int val) {
 * @param val an integer value in pence
 */
 void Account::Withdraw(int val) {
-	// Withdraw value from balance
+	// Validate user and account
+	if (gClient != ClientID) {
+		cout << "ERROR: Invalid Account Details!" << endl;
+	}
 	// Add to transaction database
+	if (Balance - val < 0) {
+		cout << "Transaction could not be completed due to lack of funds!" << endl;
+		return;
+	}
 	Balance -= val;
 	int pounds, pence;
 	pounds = float(val) / 100;
