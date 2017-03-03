@@ -7,6 +7,8 @@
 #include <time.h>
 
 #include "DrawMenus.h"
+#include "BankUtility.h"
+
 
 #include "Client.h"
 #include "AccCurrent.h"
@@ -17,75 +19,25 @@ using std::cin;
 using std::endl;
 
 /* GLOBALS */
-int gAcct = NULL;
-
-
-/* START TEST DATA */
+int gAcct;
 std::vector<Client> ClientDB;
-Client client1;
-Client client2;
-Client client3;
-Client client4;
-
-
 std::vector<Account> AccountsDB;
 
-Account test1(12, 10000);
-Account test2(13, 20000);
-Account test3(15, 15000);
-Account test4(17, 25000);
-Account test5(19, 30000);
-/* END TEST DATA */
-
-bool FindAcct(Account acc)
-{
-	if (acc.AccountID == gAcct)
-		return true;
-	else
-		return false;
-}
-
-
-//cout << "The first odd value is " << *it << '\n';
-/*
-Test data
-*/
-
-void listAccounts() {
-	std::vector<Account>::iterator acct;
-	for (acct = AccountsDB.begin(); acct != AccountsDB.end(); acct++)
-	{
-		cout	<< "Found Account ID = " << acct->AccountID 
-				<< "  Balance = " << acct->Balance			
-				<< endl;
-
-		if (acct->AccountID == gAcct)
-		{
-			cout << "Found Account ID = "<< acct->AccountID << endl;
-			//return *acct;
-		}
-	}
-}
 
 
 int main()
 {
 	int MenuState = 99;
+	/* START Test data	*/
 
-	/*Add test accounts to database*/
-	AccountsDB.push_back(test1);
-	AccountsDB.push_back(test2);
-	AccountsDB.push_back(test3);
-	AccountsDB.push_back(test4);
-	AccountsDB.push_back(test5);
+	AddClient("Marc", "Chapman", "ChunkyChip");
+	AddClient("Daryl", "Conway", "DefconGinger");
+	AddClient("Ryan", "Wooton", "JollyGreen");
 
-	listAccounts();
-	
-	//std::vector<Account>::iterator acct = std::find_if(AccountsDB.begin(), AccountsDB.end(), FindAcct);
-	
-	
 
-	
+	listClients();
+	/* END	Test data	*/
+
 
 	/*
 	

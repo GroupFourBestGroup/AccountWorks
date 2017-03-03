@@ -1,6 +1,6 @@
 #include "Client.h"
 
-
+int Client::TotalClients = 0;
 
 Client::Client()
 {
@@ -8,6 +8,7 @@ Client::Client()
 
 Client::Client(string Fname, string Sname, string uname)
 {
+	SetClientID();
 	Forename = Fname;
 	Surname = Sname;
 	username = uname;
@@ -22,7 +23,8 @@ Client::~Client()
 {
 }
 
-void Client::SetClientID()
-{
-	ClientID++;
+void  Client::SetClientID() {
+	++TotalClients;
+	ClientID = TotalClients;
 }
+

@@ -5,6 +5,8 @@ using std::string;
 
 class Client
 {
+public:
+	static int TotalClients;
 	int ClientID;
 	string Forename;
 	//string Middlename;

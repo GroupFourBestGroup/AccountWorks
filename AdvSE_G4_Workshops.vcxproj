@@ -148,6 +148,7 @@
     <ClInclude Include="AccCurrent.h" />
     <ClInclude Include="Account.h" />
     <ClInclude Include="AccSavings.h" />
+    <ClInclude Include="BankUtility.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="DrawMenus.h" />
   </ItemGroup>
