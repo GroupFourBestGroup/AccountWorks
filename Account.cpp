@@ -16,7 +16,6 @@ int Account::TotalAccounts = 0;
 * Default Constructor
 */
 Account::Account(){	
-
 }
 
 /**
@@ -26,7 +25,7 @@ Account::Account(){
 */
 Account::Account(int Client, int val=0){
 	time_t date = time(0);
-	SetAccountID();
+	Account::SetAccountID();
 	ClientID = Client;
 	Balance = val;
 	InterestRate = 0;
@@ -59,15 +58,12 @@ void Account::SetAccountID() {
 * Deposit a value into the account.
 * @param val an integer value in pence
 */
-void Account::Deposit(int val) {
-	
+void Account::Deposit(int val) {	
 	Balance += val;
 	int pounds, pence;
 	pounds = float(val) / 100;
 	pence = val - pounds*100;
 	cout << pounds <<"."<< pence << " Deposited" << endl;
-
-	cout << "Transaction Complete" << endl;
 }
 
 /**
@@ -89,8 +85,6 @@ void Account::Withdraw(int val) {
 	pounds = float(val) / 100;
 	pence = val - pounds * 100;
 	cout << pounds << "." << pence << " Deposited" << endl;
-
-	cout << "Transaction Complete" << endl;
 }
 
 /**

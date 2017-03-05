@@ -21,13 +21,14 @@ using std::endl;
 /* GLOBALS */
 int gAcct=0;
 int gClient=0;
-Client *UseClient;
-Account *UseAccount;
 std::vector<Client> ClientDB;
 std::vector<Account> AccountsDB;
 
 int main()
 {
+
+	
+
 	int MenuState = 99;
 	/* START Test data	*/
 

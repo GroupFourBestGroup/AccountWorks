@@ -6,6 +6,8 @@
 
 extern int gAcct;
 extern int gClient;
+extern Client *UseClient;
+extern Account *UseAccount;
 extern std::vector<Client> ClientDB;
 extern std::vector<Account> AccountsDB;
 
