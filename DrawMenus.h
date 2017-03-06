@@ -4,8 +4,48 @@
 using std::cout;
 using std::endl;
 
+void DrawLoginMenu() {
+	system("cls");
+	cout << "******************************************************************" << endl;
+	cout << "**   Login Main Menu                                            **" << endl;
+	cout << "******************************************************************" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**   please insert your account number.                         **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**   If you don't have an account and wish to create one        **" << endl;
+	cout << "**   please enter (0)                                           **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "******************************************************************" << endl;
 
-
+void DrawCreateMenu() {
+	system("cls");
+	cout << "******************************************************************" << endl;
+	cout << "**   Create Account Main Menu                                   **" << endl;
+	cout << "******************************************************************" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**   To create an account please enter the following details    **" << endl;
+	cout << "**   seperated with the (enter) key:                            **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**   Account type, 1 for savings, 2 for current                 **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**   First name                                                 **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**   Last name                                                  **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**   to cancel enter 0 in the account type                      **" << endl;
+	cout << "******************************************************************" << endl;	
+	
 void DrawMainMenu() {
 	system("cls");
 	cout << "******************************************************************" << endl;
