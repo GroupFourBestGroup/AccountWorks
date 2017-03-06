@@ -6,8 +6,6 @@
 
 extern int gAcct;
 extern int gClient;
-extern Client *UseClient;
-extern Account *UseAccount;
 extern std::vector<Client> ClientDB;
 extern std::vector<Account> AccountsDB;
 
@@ -16,8 +14,7 @@ extern std::vector<Account> AccountsDB;
 * @param client ClientID of account owner
 * @param val an integer value in pence
 */
-void AddAccount(int client, int value) {
-	//Account *Acct1 = new Account(client, value);
+inline void AddAccount(int client, int value) {
 	if (gClient==0 || client != gClient){
 		cout << "Error: Invalid or mmismatched Client ID!" << endl;
 		return;
@@ -32,8 +29,7 @@ void AddAccount(int client, int value) {
 * @param surname string personal details
 * @param username string used for logging into system.
 */
-void AddClient(std::string forename, std::string surname, std::string username) {
-	//Client *client1 = new Client(forename, surname, username);
+inline void AddClient(std::string forename, std::string surname, std::string username) {
 	Client client1(forename, surname, username);
 	ClientDB.push_back(client1);
 }
@@ -61,9 +57,21 @@ void findClient() {
 /**
 * List all known clients
 */
-void listClients() {
+inline void listClients() {
+	for(int i=0; i < ClientDB.size(); i++){
+		cout << "Found Client ID = " << ClientDB[i].ClientID << "; "
+			<< "U-Name = " << ClientDB[i].username << "; "
+			<< "Pin = " << ClientDB[i].pin << "; "
+			<< endl;
+	}
+}
+
+/**
+* List all known clients
+*/
+void listClients2() {
 	std::vector<Client>::iterator client;
-	for (client = ClientDB.begin(); client != ClientDB.end(); client++)	{
+		for (client = ClientDB.begin(); client != ClientDB.end(); client++)	{
 		cout << "Found Client ID = " << client->ClientID << "; "
 			<< "U-Name = " << client->username << "; "
 			<< "Pin = " << client->pin << "; "

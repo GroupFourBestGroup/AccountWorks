@@ -26,17 +26,28 @@ std::vector<Account> AccountsDB;
 
 int main()
 {
-
-	
-
 	int MenuState = 99;
-	/* START Test data	*/
 
+	/* START Test data	*/
 	AddClient("Marc", "Chapman", "ChunkyChip");
 	AddClient("Daryl", "Conway", "DefconGinger");
 	AddClient("Ryan", "Wooton", "JollyGreen");
 	
 	listClients();
+
+	gClient = 1;
+	AddAccount(1, 10000);
+	gClient++;
+	AddAccount(2, 20000);
+	gClient++;
+	AddAccount(3, 25000);
+
+	listAccounts();
+	cout << endl;
+
+	gClient = 2;
+	AccountsDB[gAcct].Deposit(1234); 
+	listAccounts();
 
 	cout << endl;
 
@@ -45,9 +56,7 @@ int main()
 
 	cout << endl;
 	findClient();
-
 	/* END	Test data	*/
-
 
 	/*
 	
@@ -116,6 +125,7 @@ int main()
 	}
 
 	*/
+	  
 	cin >> MenuState;
     return 0;
 }
