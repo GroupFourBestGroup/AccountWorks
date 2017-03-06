@@ -45,8 +45,8 @@ int main()
 	listAccounts();
 	cout << endl;
 
-	gClient = 2;
-	AccountsDB[gAcct].Deposit(1234); 
+	gClient = 2; gAcct = 1;
+	AccountsDB[gAcct].Deposit(10000); 
 	listAccounts();
 
 	cout << endl;

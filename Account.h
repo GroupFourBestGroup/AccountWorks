@@ -3,11 +3,16 @@
 #include <iostream>
 #include <vector>
 
+enum{
+	Default, Current, Savings
+};
+
 class Account 
 {
 // Data section
 public:
 	static int TotalAccounts;
+	int type;
 	int AccountID;
 	int ClientID;
 	int Balance;

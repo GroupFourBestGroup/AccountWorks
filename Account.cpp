@@ -1,5 +1,6 @@
 #include "Account.h"
 #include "Client.h"
+
 #include <time.h>
 
 using std::cout;
@@ -16,6 +17,17 @@ int Account::TotalAccounts = 0;
 * Default Constructor
 */
 Account::Account(){	
+	time_t date = time(0);
+	type = 1;
+	AccountID = 0;
+	ClientID = 0;
+	Balance = 0;
+	InterestRate = 0;
+	InterestCap = 0;
+	ODLimit = 0;
+	CreateDate = date;
+	LastAccess = date;
+
 }
 
 /**
@@ -25,6 +37,7 @@ Account::Account(){
 */
 Account::Account(int Client, int val=0){
 	time_t date = time(0);
+	type = 1;
 	Account::SetAccountID();
 	ClientID = Client;
 	Balance = val;
@@ -58,7 +71,19 @@ void Account::SetAccountID() {
 * Deposit a value into the account.
 * @param val an integer value in pence
 */
-void Account::Deposit(int val) {	
+void Account::Deposit(int val) {
+	switch(type){
+	case 1: // Current
+		break;
+	case 2: // Savings
+		break;
+	default:
+		break;
+	}
+	if (Balance + val >= 20000)	{
+		val = val * 0.005;
+	}
+
 	Balance += val;
 	int pounds, pence;
 	pounds = float(val) / 100;
@@ -81,6 +106,7 @@ void Account::Withdraw(int val) {
 		return;
 	}
 	Balance -= val;
+
 	int pounds, pence;
 	pounds = float(val) / 100;
 	pence = val - pounds * 100;
@@ -95,7 +121,7 @@ void Account::Withdraw(int val) {
 * @param acct The AccountID of the recieving account.
 */
 void Account::Transfer(int val, int AccID) {
-	// Add value to Account
+	// Add value to Account 
 	// Withdraw value from balance
 	// Add to transaction database
 	cout << "Parent Transfer Done! Value = " << float(val / 100) << endl;

@@ -37,8 +37,9 @@ inline void AddClient(std::string forename, std::string surname, std::string use
 /**
 * Find a single client using global variable gClient.
 */
-void findClient() {
+inline void findClient() {
 	std::vector<Client>::iterator client;
+
 	for (client = ClientDB.begin(); client != ClientDB.end(); client++) {
 		if (gClient == 0) {
 			std::cout << "ERROR: Client ID not specified! " << std::endl;
@@ -69,7 +70,7 @@ inline void listClients() {
 /**
 * List all known clients
 */
-void listClients2() {
+inline void listClients2() {
 	std::vector<Client>::iterator client;
 		for (client = ClientDB.begin(); client != ClientDB.end(); client++)	{
 		cout << "Found Client ID = " << client->ClientID << "; "
@@ -82,7 +83,7 @@ void listClients2() {
 /**
 * List all known Accounts
 */
-void listAccounts() {
+inline void listAccounts() {
 	std::vector<Account>::iterator acct;
 	for (acct = AccountsDB.begin(); acct != AccountsDB.end(); acct++)
 	{
@@ -92,7 +93,7 @@ void listAccounts() {
 
 		if (acct->AccountID == gAcct)
 		{
-			cout << "Found Account ID = " << acct->AccountID << endl;
+			//cout << "Found Account ID = " << acct->AccountID << endl;
 			//return *acct;
 		}
 	}

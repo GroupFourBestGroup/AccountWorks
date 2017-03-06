@@ -5,9 +5,10 @@ class AccCurrent :
 {
 public:
 	AccCurrent();
+	AccCurrent(int client, int val);
 	~AccCurrent();
 
-	void Deposit(int val);
+	void Deposit(int val) override;
 };
 
 
