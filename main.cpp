@@ -30,32 +30,31 @@ int main()
 
 	/* START Test data	*/
 	AddClient("Marc", "Chapman", "ChunkyChip");
-	AddClient("Daryl", "Conway", "DefconGinger");
-	AddClient("Ryan", "Wooton", "JollyGreen");
+	//AddClient("Daryl", "Conway", "DefconGinger");
+	//AddClient("Ryan", "Wooton", "JollyGreen");
 	
 	listClients();
 
-	gClient = 1;
-	AddAccount(1, 10000);
-	gClient++;
-	AddAccount(2, 20000);
-	gClient++;
-	AddAccount(3, 25000);
+	//gClient = 1;
+
+	AddAccount(Current, 1, 100000);
+	AddAccount(Savings, 1, 100000);
+	AddAccount(Savings, 1, 10000);
 
 	listAccounts();
 	cout << endl;
 
-	gClient = 2; gAcct = 1;
-	AccountsDB[gAcct].Deposit(10000); 
+	gClient = 1;
+	for (int i = 0;  i <= ClientDB.size(); i++) {
+		gAcct = i;
+		AccountsDB[i].Deposit(10000);
+		findAccount();
+	}
+	
 	listAccounts();
 
 	cout << endl;
 
-	findClient();
-	gClient = 1;
-
-	cout << endl;
-	findClient();
 	/* END	Test data	*/
 
 	/*

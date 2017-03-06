@@ -17,16 +17,6 @@ int Account::TotalAccounts = 0;
 * Default Constructor
 */
 Account::Account(){	
-	time_t date = time(0);
-	type = 1;
-	AccountID = 0;
-	ClientID = 0;
-	Balance = 0;
-	InterestRate = 0;
-	InterestCap = 0;
-	ODLimit = 0;
-	CreateDate = date;
-	LastAccess = date;
 
 }
 
@@ -35,9 +25,9 @@ Account::Account(){
 * @param Client ID of the Account owner
 * @param val Starting balance of account, defaults to 0 if no value provided
 */
-Account::Account(int Client, int val=0){
+Account::Account(int type, int Client, int val=0){
 	time_t date = time(0);
-	type = 1;
+	Account::type = type;
 	Account::SetAccountID();
 	ClientID = Client;
 	Balance = val;
@@ -72,17 +62,24 @@ void Account::SetAccountID() {
 * @param val an integer value in pence
 */
 void Account::Deposit(int val) {
-	switch(type){
+	switch (type) {
 	case 1: // Current
+		if (Balance + val >= 20000) {
+			val += val * 0.005;
+		}
 		break;
 	case 2: // Savings
+		if (Balance + val >= 100000) {
+			val += val * 0.012;
+		}
+		else {
+			val += val * 0.008;
+		}
 		break;
 	default:
 		break;
 	}
-	if (Balance + val >= 20000)	{
-		val = val * 0.005;
-	}
+
 
 	Balance += val;
 	int pounds, pence;

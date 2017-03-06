@@ -10,14 +10,7 @@ AccSavings::~AccSavings()
 }
 
 void AccSavings::Deposit(int val) {
-	if (Balance+val >= 100000)
-	{
-		val = val * 0.012;
-	}
-  else
-  {
-	  val = val * 0.008;
-  }
+	
   
 	Balance += val;
 	int pounds, pence;

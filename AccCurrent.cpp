@@ -1,19 +1,7 @@
 #include <time.h>
 #include "AccCurrent.h"
 
-AccCurrent::AccCurrent()
-{
-	time_t date = time(0);
-	type = 1;
-	AccountID = 0;
-	ClientID = 0;
-	Balance = 0;
-	InterestRate = 0;
-	InterestCap = 0;
-	ODLimit = 0;
-	CreateDate = date;
-	LastAccess = date;
-}
+AccCurrent::AccCurrent(){}
 
 AccCurrent::AccCurrent(int Client, int val){
 	time_t date = time(0);
@@ -33,13 +21,13 @@ AccCurrent::~AccCurrent()
 }
 
 void AccCurrent::Deposit(int val) {
-	if (Balance+val >= 20000)	{
-		val = val * 0.005;
+	if (Balance + val >= 20000) {
+		val += val * 0.005;
 	}
-  
+
 	Balance += val;
 	int pounds, pence;
 	pounds = float(val) / 100;
-	pence = val - pounds*100;
-	std::cout << pounds <<"."<< pence << " Deposited" << std::endl;
+	pence = val - pounds * 100;
+	std::cout << pounds << "." << pence << " Deposited" << std::endl;
 }

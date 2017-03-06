@@ -28,7 +28,7 @@ private:
 // Methods section
 public:
 	Account();
-	Account(int Client, int val);
+	Account(int type, int Client, int val);
 
 	virtual ~Account();
 
