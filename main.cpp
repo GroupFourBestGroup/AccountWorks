@@ -19,6 +19,7 @@ using std::cin;
 using std::endl;
 
 /* GLOBALS */
+bool gLogin=false;
 int gAcct=0;
 int gClient=0;
 std::vector<Client> ClientDB;
@@ -26,8 +27,7 @@ std::vector<Account> AccountsDB;
 
 int main()
 {
-	int MenuState = 99;
-
+	
 	/* START Test data	*/
 	AddClient("Marc", "Chapman", "ChunkyChip");
 	//AddClient("Daryl", "Conway", "DefconGinger");
@@ -41,8 +41,8 @@ int main()
 	AddAccount(Savings, 1, 100000);
 	AddAccount(Savings, 1, 10000);
 
-	listAccounts();
-	cout << endl;
+	//listAccounts();
+	//cout << endl;
 
 	gClient = 1;
 	for (int i = 0;  i <= ClientDB.size(); i++) {
@@ -51,81 +51,99 @@ int main()
 		findAccount();
 	}
 	
-	listAccounts();
+	//listAccounts();
 
 	cout << endl;
 
 	/* END	Test data	*/
 
-	/*
+	/**
+	*	Set up Application starting conditions
+	*/
+	int MenuState = 99;
+	// Draw Initial Menu
 	
-	DrawMainMenu(); 
+	//DrawMainMenu(); 
 	cin >> MenuState;
 	while (MenuState != 0){
-		DrawMainMenu();
-		switch (MenuState)
-		{
-			
+		int val=0;
+
+		switch (MenuState){
 		case(1):
-			// Deposit
-			DrawPayMenu();
+			// Validate User
+			// Set gClient
+			// Display Account Selection menu
+			// Validate Account
+			// set gAccount
+			// Set gLogin=true			
+			// Set
+			break;
+			
+		case(11):						// Deposit
+			DrawDepositMenu();
 			// enter value
-			int val;
+			
 			cin >> val;
+			if (val > 0) {
+				AccountsDB[gAcct].Deposit(val);
+				// Validate
+			}
+			break;
 
-			//if (val == 0) break;
-			if(val != 0){ test1->Deposit(val); }
+		case(12):						// Withdraw
+			DrawWithdrawMenu();
+			cin >> val;
+			if (val < 0) {
+				AccountsDB[gAcct].Withdraw(val);
+			}
+			break;
+
+		case(13):						// Transfer
+			cin >> val;
+			if (val < 0) {
+				// FIXME
+				//AccountsDB[gAcct].Transfer(val);
+			}
+			break;
+
+		case(14) :						// Payment
+			DrawPaymentMenu();
+			cin >> val;
+			if (val < 0) {
+				AccountsDB[gAcct].Payment(val);
+			}
+			break;
+
+		case(15):						// Statement
+			DrawInfoMenu();
+			cin >> val;
+			if (val >= 0 || val <= 11) {
+				AccountsDB[gAcct].ViewStatement(val);
+			}
+			else {
+				cout << "Error: Incorrect month specified, please try again" << endl;
+			}			
+			break;
+
+		case(0):						// Exit Program
+			if (gLogin == true){
 				
-
+			}
+			else{
+				cout << "---------- EXITING ----------" << endl << endl;
+			}
 			break;
 
-		case(2):
-			// Withdraw
-			DrawPayMenu();
-			test1->Withdraw(0);
-			break;
-
-		case(3):
-			// Transfer
-			DrawTransferMenu();
-			test1->Transfer(0, 0);
-			break;
-
-		case(4) :
-			// Payment
-			DrawPayMenu();
-			test1->Payment(0);
-			break;
-
-		case(5):
-			// Statement
-			DrawInfoMenu();
-			test1->ViewStatement(0);
-			break;
-		case(10):
-			// Call Deposit methods
-			DrawInfoMenu();
-			test1->ViewStatement(0);
-			break;
-
-		case(0):
-			// Do stuff
-			cout << "---------- EXITING ----------" << endl << endl;
-			break;
-
-		default:
+		default:						// Abandon all hope all ye who enter here
 			cout << "---------- ERROR OCCURED ----------" <<endl<<endl;
-			// Bollocks
 			break;
 		}
 
-		cin >> MenuState;
+
 		
 	}
 
-	*/
-	  
-	cin >> MenuState;
+
     return 0;
 }
 

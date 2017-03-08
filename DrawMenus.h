@@ -46,14 +46,58 @@ void DrawMainMenu() {
 	cout << "******************************************************************" << endl;
 }
 
-void DrawPayMenu() {
+void DrawDepositMenu() {
 	system("cls");
 	cout << "******************************************************************" << endl;
 	cout << "**   Current Account transaction menu                           **" << endl;
 	cout << "******************************************************************" << endl;
 	cout << "**                                                              **" << endl;
 	cout << "**                                                              **" << endl;
-	cout << "**    please insert amount you wish.                            **" << endl;
+	cout << "**    Please enter the Deposit Amount.                          **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**  (enter)to complete transaction               (0) cancel     **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "******************************************************************" << endl;
+}
+
+void DrawWithdrawMenu() {
+	system("cls");
+	cout << "******************************************************************" << endl;
+	cout << "**   Current Account transaction menu                           **" << endl;
+	cout << "******************************************************************" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**    Please enter the Withdrawl Amount.                        **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**  (enter)to complete transaction               (0) cancel     **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "******************************************************************" << endl;
+}
+
+void DrawPaymentMenu() {
+	system("cls");
+	cout << "******************************************************************" << endl;
+	cout << "**   Current Account transaction menu                           **" << endl;
+	cout << "******************************************************************" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**                                                              **" << endl;
+	cout << "**    Please enter the Payment Amount.                          **" << endl;
 	cout << "**                                                              **" << endl;
 	cout << "**                                                              **" << endl;
 	cout << "**                                                              **" << endl;

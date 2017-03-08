@@ -52,11 +52,13 @@ inline void AddClient(std::string forename, std::string surname, std::string use
 */
 inline void findClient() {
 	for (int i = 0; i < ClientDB.size(); i++) {
+		
 		if (gClient == 0) {
 			std::cout << "ERROR: Client ID not specified! " << std::endl;
 			return;
 		}
 		if (ClientDB[i].ClientID == gClient) {
+			cout << "i=" << i << "; " << "gClient=" << gClient << ";" << endl;
 			cout << "Found Client ID = " << ClientDB[i].ClientID << ";"<< endl;
 		}
 	}
@@ -84,6 +86,7 @@ inline void findAccount() {
 			return;
 		}
 		if (AccountsDB[i].AccountID == gAcct) {
+			cout << "gClient=" << gClient << ";" << endl;
 			cout << "Found Accounts ID = " << AccountsDB[i].AccountID << ";" << endl;
 		}
 	}
